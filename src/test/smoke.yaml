@@ -1,0 +1,21 @@
+name: "QA-Quiz Natera"
+verbose: 2
+parameters:
+  serviceUrl: "https://qa-quiz.natera.com/triangle/"
+  authName: "X-User"
+  authKey: "f5589c3d-5097-47dd-902d-7b31b51b8b3a"
+  authKey2: "9b5955b0-8e4f-4c5f-a2e7-8bc0dbd9e614"
+  requestsLogging: "false"
+
+tests:
+  - name: "Smoke Tests"
+    classes:
+      - name: "com.rest.qa.PostTest"
+        includedMethods:
+          - postTriangleTest
+          - maxAmountTest
+      - name: "com.rest.qa.DeleteTest"
+        includedMethods:
+          - oneTriangleTest
+      - com.rest.qa.GetTest
+      - com.rest.qa.SmokeTest

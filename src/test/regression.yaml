@@ -1,0 +1,23 @@
+name: "QA-Quiz Natera"
+verbose: 2
+parameters:
+  serviceUrl: "https://qa-quiz.natera.com/triangle/"
+  authName: "X-User"
+  authKey: "f5589c3d-5097-47dd-902d-7b31b51b8b3a"
+  authKey2: "9b5955b0-8e4f-4c5f-a2e7-8bc0dbd9e614"
+  requestsLogging: "true"
+
+tests:
+  - name: "Regression Tests"
+    classes:
+      - com.rest.qa.AccessTest
+      - com.rest.qa.AreaTest
+      - com.rest.qa.DeleteTest
+      - com.rest.qa.ErrorResponseTest
+      - com.rest.qa.GetTest
+      - com.rest.qa.NotFoundErrorTest
+      - com.rest.qa.PerimeterTest
+      - com.rest.qa.PostTest
+      - com.rest.qa.PostTriangleBodyTest
+      - com.rest.qa.UnprocessibleBodyTest
+      - com.rest.qa.UnprocessibleTrianglesTest
